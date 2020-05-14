@@ -3,7 +3,7 @@ import useFilter from '../../hooks/useFilter';
 import './style.css';
 
 const Search = () => (
-    <input className="emoji-search"
+    <input type="search" className="emoji-search"
         onChange={useFilter()}
         autoFocus/>
 );
