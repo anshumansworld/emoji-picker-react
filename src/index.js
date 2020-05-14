@@ -50,9 +50,8 @@ const EmpojiPicker = ({ emojiUrl = DEFAULT_EMOJI_URL, onEmojiClick, preload = fa
     return (
         <PickerContext.Provider value={{ state, dispatch }}>
             <aside className="emoji-picker-react" onScroll={closeVariations} onMouseDown={closeVariations}>
-                <div style={{position: 'relative'}}>
+                <div className="search-container">
                     <Search/>
-                    <SkinTones/>
                 </div>
                 <CategoriesNav emojiListRef={emojiListRef}/>
                 <div className="content-wrapper" data-name={state.emojiName}>
