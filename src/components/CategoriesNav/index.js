@@ -45,7 +45,7 @@ const CategoriesNav = ({ emojiListRef }) => {
     return (
         <nav onClick={handleClick} className={cn('emoji-categories', { inactive })}>{
             groups.map((group) => (
-                <div className={cn('emoji-categories-tab', {active: activeCategory === group})}>
+                <div key={group} className={cn('emoji-categories-tab', {active: activeCategory === group})}>
                     <button key={group}
                             type="button"
                             className={cn(`icn-${group.replace(' & ', '_')}`, { active: activeCategory === group })}
